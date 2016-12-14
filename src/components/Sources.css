@@ -24,8 +24,12 @@
   user-select: none;
 }
 
-.sources-header {
-  padding-inline-start: 10px;
+html:not([dir="rtl"]) .sources-header {
+  padding-left: 10px;
+}
+
+html[dir="rtl"] .sources-header {
+  padding-right: 10px;
 }
 
 .sources-header-info {
@@ -33,8 +37,16 @@
   color: var(--theme-comment-alt);
   font-weight: lighter;
   white-space: nowrap;
-  padding-inline-end: 10px;
-  float: end;
+}
+
+html:not([dir="rtl"]) .sources-header-info {
+  padding-right: 10px;
+  float: right;
+}
+
+html[dir="rtl"] .sources-header-info {
+  padding-left: 10px;
+  float: left;
 }
 
 .sources-list {
